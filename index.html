@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toba Jurídicos | Lic. Miguel Ángel Tovar — Abogado en Saltillo</title>
+    <meta name="description" content="Toba Jurídicos ofrece asesoría legal en derecho familiar, sucesiones y laboral en Saltillo. Agenda tu consulta presencial o telefónica.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #000000;
+            --black-solid: #000000;
+            --cosmic-purple: #2E0057;
+            --cosmic-purple-light: #6A00FF;
+            --violet-bright: #9B59FF;
+            --violet-glow: #BF7BFF;
+            --silver: #CFCFE8;
+            --family: #C0392B;
+            --succession: #1F3A93;
+            --labor: #16A085;
+            --advice: #8E44AD;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* CURSOR BÚHO OPCIÓN 1 */
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M16 6C10 6 6 12 6 18C6 24 10 26 16 26C22 26 26 24 26 18C26 12 22 6 16 6ZM14 10C15.5 10 16.5 11 16.5 12.5C16.5 14 15.5 15 14 15C12.5 15 11.5 14 11.5 12.5C11.5 11 12.5 10 14 10ZM18 10C19.5 10 20.5 11 20.5 12.5C20.5 14 19.5 15 18 15C16.5 15 15.5 14 15.5 12.5C15.5 11 16.5 10 18 10ZM16 22C13 22 11 20 10 18H22C21 20 19 22 16 22Z' fill='%239B59FF'/%3E%3Ccircle cx='14' cy='13' r='1' fill='%23000000'/%3E%3Ccircle cx='18' cy='13' r='1' fill='%23000000'/%3E%3C/svg%3E") 16 16, auto;
+        }
+        
+        html {
+            background-color: var(--black-solid) !important;
+            min-height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            /* ¡QUITADO EL FONDO NEGRO DEL BODY! */
+            color: var(--silver);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* ==================== */
+        /* FONDO DE PARTÍCULAS MORADAS - ¡AHORA SE VEN! */
+        /* ==================== */
+        #particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0; /* ¡IMPORTANTE! Entre fondo y contenido */
+        }
+        
+        .particle {
+            position: absolute;
+            background: var(--violet-bright);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 0;
+            filter: blur(1px);
+        }
+
+        /* ==================== */
+        /* CONTENEDOR PRINCIPAL CON FONDO NEGRO */
+        /* ==================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 1; /* Sobre las partículas */
+            background-color: var(--black-solid);
+            min-height: 100vh;
+        }
+
+        /* ==================== */
+        /* EFECTOS DE LUZ */
+        /* ==================== */
+        .laser-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                var(--cosmic-purple-light),
+                var(--violet-bright),
+                transparent);
+            z-index: 9998;
+            animation: laser-scan 3s linear infinite;
+            box-shadow: 0 0 20px var(--violet-bright);
+        }
+
+        @keyframes laser-scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .halo-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                radial-gradient(circle at 20% 10%, rgba(155, 89, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(106, 0, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 30% 80%, rgba(191, 123, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 90%, rgba(46, 0, 87, 0.1) 0%, transparent 50%);
+            animation: halo-pulse 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes halo-pulse {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; }
+        }
+
+        /* ==================== */
+        /* HEADER */
+        /* ==================== */
+        header {
+            position: fixed;
+            top: 3px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--cosmic-purple);
+            box-shadow: 0 0 30px rgba(155, 89, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        /* LOGO BÚHO SIN CÍRCULO */
+        .logo-owl {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--violet-bright);
+            text-shadow: 
+                0 0 15px rgba(155, 89, 255, 0.9),
+                0 0 25px rgba(155, 89, 255, 0.5);
+            animation: logo-pulse 3s infinite alternate;
+            filter: drop-shadow(0 0 8px rgba(155, 89, 255, 0.7));
+        }
+
+        @keyframes logo-pulse {
+            0% { 
+                transform: scale(1);
+                text-shadow: 0 0 15px rgba(155, 89, 255, 0.9);
+            }
+            100% { 
+                transform: scale(1.05);
+                text-shadow: 0 0 20px rgba(155, 89, 255, 1);
+            }
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: #9B59FF;
+            text-shadow: 
+                0 0 10px rgba(155, 89, 255, 0.9),
+                0 0 20px rgba(155, 89, 255, 0.5);
+            letter-spacing: 1px;
+            font-weight: 700;
+            animation: text-flicker 3s infinite alternate;
+        }
+
+        @keyframes text-flicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(155, 89, 255, 0.9); }
+            50% { opacity: 0.9; text-shadow: 0 0 15px rgba(155, 89, 255, 1); }
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--violet-bright);
+            font-size: 24px;
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.7);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 3px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        nav a:hover {
+            color: var(--violet-bright);
+            text-shadow: 0 0 10px rgba(155, 89, 255, 1);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 10px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--violet-bright), transparent);
+            transition: width 0.3s;
+            box-shadow: 0 0 5px var(--violet-bright);
+        }
+        
+        nav a:hover::after {
+            width: calc(100% - 20px);
+        }
+        
+        /* ==================== */
+        /* HERO SECTION */
+        /* ==================== */
+        .hero {
+            margin-top: 90px;
+            padding: 40px 5% 60px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(155, 89, 255, 0.2);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, 
+                    rgba(46, 0, 87, 0.15) 0%, 
+                    transparent 50%),
+                radial-gradient(circle at 80% 70%, 
+                    rgba(106, 0, 255, 0.1) 0%, 
+                    transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+            animation: hero-glow 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes hero-glow {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; }
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, var(--violet-bright), var(--violet-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            padding-bottom: 15px;
+            animation: title-glow 4s infinite alternate;
+        }
+
+        @keyframes title-glow {
+            0% { text-shadow: 0 0 20px rgba(155, 89, 255, 0.5); }
+            100% { text-shadow: 0 0 40px rgba(155, 89, 255, 0.8); }
+        }
+        
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                transparent);
+            box-shadow: 0 0 15px var(--violet-bright);
+            animation: line-glow 2s infinite alternate;
+        }
+
+        @keyframes line-glow {
+            0% { opacity: 0.5; box-shadow: 0 0 10px var(--violet-bright); }
+            100% { opacity: 1; box-shadow: 0 0 20px var(--violet-bright); }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            color: var(--silver);
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.3);
+            font-weight: 300;
+        }
+        
+        /* CONTENEDOR PARA FOTO DEL ABOGADO SIN CÍRCULO */
+        .abogado-container {
+            margin: 40px 0;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            filter: drop-shadow(0 0 20px rgba(155, 89, 255, 0.5));
+        }
+        
+        .abogado-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .abogado-container:hover .abogado-img {
+            transform: scale(1.05);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--black-solid);
+            color: var(--violet-bright);
+            padding: 16px 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 2px solid var(--violet-bright);
+            box-shadow: 
+                0 0 20px rgba(155, 89, 255, 0.5),
+                inset 0 0 20px rgba(155, 89, 255, 0.1);
+            transition: all 0.3s;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                var(--violet-bright),
+                var(--cosmic-purple-light),
+                var(--violet-bright),
+                transparent
+            );
+            animation: energy-rotate 3s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+        
+        @keyframes energy-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .btn:hover::before {
+            opacity: 0.3;
+        }
+        
+        .btn:hover {
+            box-shadow: 
+                0 0 30px rgba(155, 89, 255, 0.8),
+                inset 0 0 30px rgba(155, 89, 255, 0.2);
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        /* ==================== */
+        /* SERVICES SECTION */
+        /* ==================== */
+        .services {
+            padding: 80px 5%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 15px;
+            text-shadow: 0 0 15px rgba(155, 89, 255, 0.7);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            width: 40%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                transparent);
+            box-shadow: 0 0 15px var(--violet-bright);
+            animation: line-glow 2s infinite alternate-reverse;
+        }
+        
+        .service-box {
+            background-color: rgba(5, 5, 5, 0.9);
+            border-radius: 2px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(155, 89, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, 
+                var(--cosmic-purple), 
+                var(--cosmic-purple-light), 
+                var(--violet-bright));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s;
+            filter: blur(5px);
+        }
+        
+        .service-box:hover::before {
+            opacity: 0.3;
+        }
+        
+        .service-box:hover {
+            border-color: var(--violet-bright);
+            box-shadow: 
+                0 0 30px rgba(155, 89, 255, 0.3),
+                inset 0 0 30px rgba(155, 89, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--violet-bright);
+            text-shadow: 
+                0 0 15px rgba(155, 89, 255, 0.7),
+                0 0 25px rgba(155, 89, 255, 0.5);
+            align-self: flex-start;
+            animation: icon-float 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes icon-float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); }
+        }
+        
+        .service-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--violet-bright), var(--violet-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.5);
+        }
+        
+        .service-list {
+            list-style-type: none;
+            flex-grow: 1;
+        }
+        
+        .service-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            font-weight: 300;
+            transition: all 0.3s;
+        }
+        
+        .service-list li:hover {
+            color: var(--violet-bright);
+            transform: translateX(5px);
+        }
+        
+        .service-list li:before {
+            content: '▸';
+            color: var(--violet-bright);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            text-shadow: 0 0 8px rgba(155, 89, 255, 0.7);
+            animation: arrow-blink 2s infinite;
+        }
+
+        @keyframes arrow-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* ==================== */
+        /* SPECIAL BOXES */
+        /* ==================== */
+        .special-boxes {
+            padding: 0 5% 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .special-box {
+            border-radius: 2px;
+            padding: 40px 30px;
+            margin-bottom: 25px;
+            text-align: center;
+            border: 1px solid rgba(155, 89, 255, 0.3);
+            background-color: rgba(5, 5, 5, 0.9);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .special-box:hover {
+            border-color: var(--violet-bright);
+            box-shadow: 
+                0 0 35px rgba(155, 89, 255, 0.4),
+                inset 0 0 35px rgba(155, 89, 255, 0.1);
+        }
+        
+        .multicolor-box {
+            background: linear-gradient(45deg, 
+                rgba(46, 0, 87, 0.1), 
+                rgba(106, 0, 255, 0.1), 
+                rgba(155, 89, 255, 0.1));
+            border: 1px solid var(--violet-bright);
+            animation: multi-color-shift 5s infinite alternate;
+        }
+
+        @keyframes multi-color-shift {
+            0% { background: linear-gradient(45deg, 
+                rgba(46, 0, 87, 0.1), 
+                rgba(106, 0, 255, 0.1), 
+                rgba(155, 89, 255, 0.1)); }
+            100% { background: linear-gradient(45deg, 
+                rgba(155, 89, 255, 0.1), 
+                rgba(46, 0, 87, 0.1), 
+                rgba(106, 0, 255, 0.1)); }
+        }
+        
+        .local-box {
+            border: 1px solid var(--violet-bright);
+            animation: border-pulse 3s infinite alternate;
+        }
+        
+        @keyframes border-pulse {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(155, 89, 255, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(155, 89, 255, 0.6);
+            }
+        }
+        
+        .rainbow-box {
+            background: linear-gradient(45deg, 
+                rgba(46, 0, 87, 0.15), 
+                rgba(106, 0, 255, 0.15), 
+                rgba(155, 89, 255, 0.15));
+            border: 1px solid var(--violet-bright);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rainbow-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                var(--cosmic-purple),
+                var(--cosmic-purple-light),
+                var(--violet-bright),
+                var(--cosmic-purple-light),
+                var(--cosmic-purple)
+            );
+            animation: rainbow-rotate 10s linear infinite;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        @keyframes rainbow-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .rainbow-box > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .special-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--violet-bright), var(--violet-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.5);
+        }
+        
+        .price-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+        
+        .price-list li {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 2px;
+            border-left: 3px solid var(--violet-bright);
+            text-align: left;
+            font-weight: 300;
+            transition: all 0.3s;
+        }
+
+        .price-list li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+            border-left-color: var(--violet-glow);
+        }
+        
+        /* ==================== */
+        /* CONTACT FORM */
+        /* ==================== */
+        .contact {
+            padding: 80px 5%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .form-container {
+            background-color: rgba(5, 5, 5, 0.9);
+            border-radius: 2px;
+            padding: 40px;
+            border: 1px solid var(--violet-bright);
+            box-shadow: 
+                0 0 30px rgba(155, 89, 255, 0.3),
+                inset 0 0 30px rgba(155, 89, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                transparent);
+            animation: form-scan 3s linear infinite;
+        }
+
+        @keyframes form-scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+        
+        .form-title {
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            color: var(--silver);
+            text-transform: uppercase;
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.5);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--silver);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(155, 89, 255, 0.3);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: rgba(10, 10, 15, 0.8);
+            border: 1px solid rgba(155, 89, 255, 0.3);
+            border-radius: 2px;
+            color: var(--silver);
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.3s;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--violet-bright);
+            box-shadow: 
+                0 0 15px rgba(155, 89, 255, 0.4),
+                inset 0 0 15px rgba(155, 89, 255, 0.2);
+            background-color: rgba(15, 15, 20, 0.9);
+        }
+
+        .form-control:focus::placeholder {
+            color: var(--violet-glow);
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            display: none;
+            font-weight: 300;
+            text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
+        
+        .success-message {
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 1px solid rgba(46, 204, 113, 0.5);
+            color: #2ecc71;
+            padding: 20px;
+            border-radius: 2px;
+            margin-top: 25px;
+            text-align: center;
+            display: none;
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+            animation: success-pulse 2s infinite alternate;
+        }
+
+        @keyframes success-pulse {
+            0% { box-shadow: 0 0 10px rgba(46, 204, 113, 0.3); }
+            100% { box-shadow: 0 0 20px rgba(46, 204, 113, 0.6); }
+        }
+        
+        /* ==================== */
+        /* FOOTER */
+        /* ==================== */
+        footer {
+            background-color: var(--black-solid);
+            padding: 60px 5% 30px;
+            border-top: 1px solid rgba(155, 89, 255, 0.2);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                transparent);
+            box-shadow: 0 0 10px var(--violet-bright);
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 2px;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--black-solid);
+            text-decoration: none;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            background: var(--black-solid);
+            border: 2px solid;
+            z-index: 1;
+        }
+        
+        .whatsapp {
+            border-color: #25D366;
+            color: #25D366;
+            box-shadow: 
+                0 0 20px rgba(37, 211, 102, 0.4),
+                inset 0 0 20px rgba(37, 211, 102, 0.1);
+        }
+        
+        .facebook {
+            border-color: #3b5998;
+            color: #3b5998;
+            box-shadow: 
+                0 0 20px rgba(59, 89, 152, 0.4),
+                inset 0 0 20px rgba(59, 89, 152, 0.1);
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: currentColor;
+            opacity: 0;
+            transition: opacity 0.3s;
+            filter: blur(10px);
+        }
+
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                currentColor,
+                transparent
+            );
+            animation: icon-rotate 3s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: -1;
+        }
+
+        @keyframes icon-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .social-icon i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover::before {
+            opacity: 0.1;
+        }
+
+        .social-icon:hover::after {
+            opacity: 0.5;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 
+                0 0 30px currentColor,
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-icon:hover i {
+            color: var(--black-solid);
+            text-shadow: 0 0 10px currentColor;
+            transform: scale(1.2);
+        }
+        
+        .whatsapp:hover i {
+            color: #25D366;
+        }
+        
+        .facebook:hover i {
+            color: #3b5998;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .address {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--violet-bright);
+            text-shadow: 
+                0 0 10px rgba(155, 89, 255, 0.8),
+                0 0 20px rgba(155, 89, 255, 0.5);
+            letter-spacing: 2px;
+            font-weight: 700;
+            animation: address-glow 4s infinite alternate;
+        }
+
+        @keyframes address-glow {
+            0% { text-shadow: 0 0 10px rgba(155, 89, 255, 0.8); }
+            100% { text-shadow: 0 0 20px rgba(155, 89, 255, 1); }
+        }
+        
+        .phone {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--silver);
+            letter-spacing: 1px;
+            font-weight: 300;
+            text-shadow: 0 0 10px rgba(155, 89, 255, 0.5);
+        }
+        
+        .mission {
+            text-align: center;
+            font-style: normal;
+            font-size: 1.3rem;
+            margin: 30px 0 40px;
+            color: var(--silver);
+            letter-spacing: 1px;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .mission::before, .mission::after {
+            content: '';
+            position: absolute;
+            left: 30%;
+            width: 40%;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--violet-bright), 
+                transparent);
+            box-shadow: 0 0 10px var(--violet-bright);
+        }
+        
+        .mission::before {
+            top: 0;
+            animation: line-glow 2s infinite alternate;
+        }
+        
+        .mission::after {
+            bottom: 0;
+            animation: line-glow 2s infinite alternate-reverse;
+        }
+        
+        .privacy {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ==================== */
+        /* RESPONSIVE */
+        /* ==================== */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 88px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.98);
+                padding: 25px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                border-bottom: 1px solid var(--cosmic-purple);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(10px);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .footer-top {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .abogado-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .abogado-container {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .service-title {
+                font-size: 1.4rem;
+            }
+            
+            .btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+
+            .special-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== -->
+    <!-- PARTÍCULAS MORADAS DE FONDO -->
+    <!-- ¡AHORA SÍ SE VEN! -->
+    <!-- ==================== -->
+    <div class="laser-top"></div>
+    <div class="halo-effect"></div>
+    <div id="particles-container"></div>
+    
+    <!-- ==================== -->
+    <!-- CONTENIDO PRINCIPAL CON FONDO NEGRO -->
+    <!-- ==================== -->
+    <div class="page-wrapper">
+        
+        <!-- HEADER CON BÚHO COMO LOGO (SIN CÍRCULO) -->
+        <header>
+            <div class="logo-container">
+                <!-- BÚHO COMO LOGO - SIN CÍRCULO -->
+                <div class="logo-owl">
+                    🦉
+                </div>
+                <div class="logo-text">TOBA JURÍDICOS</div>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#special">Información</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Toba Jurídicos, página oficial</h1>
+                <p>Hola. Somos abogados profesionales. Listos para resolver tus problemas legales</p>
+                
+                <!-- FOTO DEL ABOGADO - SIN CÍRCULO ALREDEDOR -->
+                <div class="abogado-container">
+                    <img src="abogado.png" alt="Lic. Miguel Ángel Tovar" class="abogado-img">
+                </div>
+                
+                <a href="#contact" class="btn">Agenda tu consulta</a>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services" id="services">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            
+            <div class="service-box family">
+                <i class="fas fa-home service-icon"></i>
+                <h3 class="service-title">Derecho Familiar</h3>
+                <ul class="service-list">
+                    <li>¿Les está causando problemas el padre de sus hijos?</li>
+                    <li>¿No ha pagado pensión?</li>
+                    <li>¿Le preocupa el futuro de sus pequeños hijos?</li>
+                    <li>¿Busca divorciarse?</li>
+                </ul>
+            </div>
+            
+            <div class="service-box succession">
+                <i class="fas fa-scroll service-icon"></i>
+                <h3 class="service-title">Sucesiones y Testamentos</h3>
+                <ul class="service-list">
+                    <li>¿Quiere abrir el testamento de su ser querido?</li>
+                    <li>¿Quiere leer su última voluntad?</li>
+                    <li>¿Quiere realizar la sucesión de su familiar sin testamento?</li>
+                </ul>
+            </div>
+            
+            <div class="service-box labor">
+                <i class="fas fa-briefcase service-icon"></i>
+                <h3 class="service-title">Derecho Laboral</h3>
+                <ul class="service-list">
+                    <li>Despidos injustificados</li>
+                    <li>Problemas laborales</li>
+                </ul>
+            </div>
+            
+            <div class="service-box advice">
+                <i class="fas fa-gavel service-icon"></i>
+                <h3 class="service-title">Asesorías Generales</h3>
+                <ul class="service-list">
+                    <li>Asesorías jurídicas</li>
+                    <li>Consejos sobre propiedades</li>
+                    <li>Asuntos legales</li>
+                    <li>Evite problemas</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SPECIAL BOXES -->
+        <section class="special-boxes" id="special">
+            <div class="special-box multicolor-box">
+                <h3>Ven a vernos cuando tengas problemas legales</h3>
+            </div>
+            
+            <div class="special-box local-box">
+                <h3>Problemas legales en Saltillo Coahuila</h3>
+            </div>
+            
+            <div class="special-box rainbow-box">
+                <h3>Consultoría Legal</h3>
+                <ul class="price-list">
+                    <li>Asesoría jurídica presencial: $500 MXN</li>
+                    <li>Asesoría jurídica telefónica: $250 MXN</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Agenda tu cita</h2>
+            
+            <div class="form-container">
+                <h3 class="form-title">COMENTA TU SITUACIÓN LEGAL, PROPORCIONA TU NOMBRE Y TU PROBLEMA</h3>
+                
+                <form id="contactForm" action="https://formspree.io/f/xdazzglo" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Ingresa tu nombre" required>
+                        <div class="error-message" id="nameError">Por favor complete este campo</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Número de teléfono *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Ingresa tu número" required>
+                        <div class="error-message" id="phoneError">Por favor complete este campo</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Descripción de la situación *</label>
+                        <textarea id="description" name="description" class="form-control" rows="5" placeholder="Describe tu situación legal" required></textarea>
+                        <div class="error-message" id="descriptionError">Por favor complete este campo</div>
+                    </div>
+                    
+                    <button type="submit" class="btn energy-btn">Enviar</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    Gracias, se revisará tu caso y te contactará pronto
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-top">
+                <a href="https://api.whatsapp.com/message/UBAVKC7IWDPOL1?autoload=1&app_absent=0" 
+                   class="social-icon whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                
+                <a href="https://www.facebook.com/profile.php?id=100077918253081" 
+                   class="social-icon facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            
+            <div class="contact-info">
+                <div class="address">SALTILLO COAHUILA MEXICO</div>
+                <div class="phone">814 126 8689</div>
+            </div>
+            
+            <div class="mission">
+                <p>Tu tranquilidad legal, nuestra misión.</p>
+            </div>
+            
+            <div class="privacy">
+                <p>Aviso de Privacidad: En Toba Jurídicos nos comprometemos a proteger la privacidad de tus datos personales. La información que nos proporciones será utilizada exclusivamente para brindarte el servicio legal solicitado, mantener comunicación contigo y cumplir con nuestras obligaciones legales. Tus datos no serán compartidos con terceros sin tu consentimiento, salvo que sea requerido por ley. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición contactándonos directamente.</p>
+            </div>
+        </footer>
+        
+    </div> <!-- Fin de .page-wrapper -->
+
+    <script>
+        // ==================== //
+        // SISTEMA DE PARTÍCULAS MORADAS VISIBLES //
+        // ==================== //
+        function createPurpleParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = 150; // ¡MÁS PARTÍCULAS!
+            
+            // Limpiar contenedor si ya hay partículas
+            container.innerHTML = '';
+            
+            // Crear partículas
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posición aleatoria
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Tamaño variable (más visibles)
+                const size = Math.random() * 6 + 2; // 2px a 8px
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Color morado con variaciones
+                const hue = Math.random() * 30 + 260; // 260-290 (tonos morados)
+                const saturation = Math.random() * 30 + 70; // 70-100%
+                const lightness = Math.random() * 20 + 50; // 50-70%
+                particle.style.background = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+                
+                // Opacidad y brillo
+                const opacity = Math.random() * 0.5 + 0.2; // 0.2-0.7
+                particle.style.opacity = opacity;
+                particle.style.boxShadow = `0 0 ${size * 2}px ${size}px rgba(155, 89, 255, ${opacity * 0.5})`;
+                
+                // Desenfoque para efecto de brillo
+                particle.style.filter = `blur(${Math.random() * 2 + 0.5}px)`;
+                
+                // Crear animación única
+                const animationName = `float-purple-${i}`;
+                const duration = Math.random() * 25 + 15; // 15-40 segundos
+                const delay = Math.random() * 10;
+                
+                // Añadir animación CSS
+                const style = document.createElement('style');
+                const moveX = Math.random() * 200 - 100; // -100px a 100px
+                const moveY = Math.random() * 200 - 100; // -100px a 100px
+                
+                style.textContent = `
+                    @keyframes ${animationName} {
+                        0% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: ${opacity};
+                        }
+                        25% {
+                            transform: translate(${moveX * 0.5}px, ${moveY * 0.5}px) scale(${Math.random() * 0.3 + 0.9});
+                        }
+                        50% {
+                            opacity: ${opacity * 0.3};
+                            transform: translate(${moveX}px, ${moveY}px) scale(${Math.random() * 0.3 + 0.8});
+                        }
+                        75% {
+                            transform: translate(${moveX * 0.7}px, ${moveY * 0.7}px) scale(${Math.random() * 0.3 + 0.9});
+                        }
+                        100% {
+                            transform: translate(0, 0) scale(1);
+                            opacity: ${opacity};
+                        }
+                    }
+                `;
+                
+                document.head.appendChild(style);
+                particle.style.animation = `${animationName} ${duration}s ease-in-out ${delay}s infinite`;
+                
+                container.appendChild(particle);
+            }
+            
+            console.log(`✨ ${particleCount} partículas moradas VISIBLES creadas`);
+            console.log('📍 Las partículas están en el fondo negro');
+        }
+
+        // ==================== //
+        // MENÚ MÓVIL //
+        // ==================== //
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // ==================== //
+        // VALIDACIÓN DE FORMULARIO //
+        // ==================== //
+        const contactForm = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const descriptionInput = document.getElementById('description');
+        const nameError = document.getElementById('nameError');
+        const phoneError = document.getElementById('phoneError');
+        const descriptionError = document.getElementById('descriptionError');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Reset errors
+            nameError.style.display = 'none';
+            phoneError.style.display = 'none';
+            descriptionError.style.display = 'none';
+            
+            // Validate name
+            if (!nameInput.value.trim()) {
+                nameError.style.display = 'block';
+                isValid = false;
+                nameInput.style.borderColor = '#ff6b6b';
+                nameInput.style.boxShadow = '0 0 15px rgba(255, 107, 107, 0.5)';
+            } else {
+                nameInput.style.borderColor = 'var(--violet-bright)';
+                nameInput.style.boxShadow = '0 0 15px rgba(155, 89, 255, 0.4)';
+            }
+            
+            // Validate phone
+            if (!phoneInput.value.trim()) {
+                phoneError.style.display = 'block';
+                isValid = false;
+                phoneInput.style.borderColor = '#ff6b6b';
+                phoneInput.style.boxShadow = '0 0 15px rgba(255, 107, 107, 0.5)';
+            } else {
+                phoneInput.style.borderColor = 'var(--violet-bright)';
+                phoneInput.style.boxShadow = '0 0 15px rgba(155, 89, 255, 0.4)';
+            }
+            
+            // Validate description
+            if (!descriptionInput.value.trim()) {
+                descriptionError.style.display = 'block';
+                isValid = false;
+                descriptionInput.style.borderColor = '#ff6b6b';
+                descriptionInput.style.boxShadow = '0 0 15px rgba(255, 107, 107, 0.5)';
+            } else {
+                descriptionInput.style.borderColor = 'var(--violet-bright)';
+                descriptionInput.style.boxShadow = '0 0 15px rgba(155, 89, 255, 0.4)';
+            }
+            
+            // If form is valid, submit
+            if (isValid) {
+                // Show success message
+                successMessage.style.display = 'block';
+                
+                // Efecto visual de éxito
+                successMessage.style.opacity = '0';
+                successMessage.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    successMessage.style.opacity = '1';
+                    successMessage.style.transform = 'translateY(0)';
+                    successMessage.style.transition = 'opacity 0.5s, transform 0.5s';
+                }, 100);
+                
+                // Submit form data to Formspree
+                fetch(this.action, {
+                    method: this.method,
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        // Reset form
+                        contactForm.reset();
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        alert('Hubo un error al enviar el formulario. Por favor intente nuevamente.');
+                    }
+                }).catch(error => {
+                    alert('Hubo un error al enviar el formulario. Por favor intente nuevamente.');
+                });
+            }
+        });
+        
+        // Cerrar menú móvil al hacer clic en enlace
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // ==================== //
+        // SCHEMA.ORG PARA SEO //
+        // ==================== //
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": "Toba Jurídicos",
+            "description": "Asesoría legal en derecho familiar, sucesiones y laboral en Saltillo, Coahuila",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Saltillo",
+                "addressRegion": "Coahuila",
+                "addressCountry": "MX"
+            },
+            "telephone": "+528141268689",
+            "areaServed": {
+                "@type": "City",
+                "name": "Saltillo"
+            },
+            "url": window.location.href,
+            "priceRange": "$250 - $500 MXN"
+        });
+        document.head.appendChild(script);
+        
+        // ==================== //
+        // INICIALIZACIÓN //
+        // ==================== //
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear partículas moradas VISIBLES
+            createPurpleParticles();
+            
+            // Efecto de carga inicial
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s';
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Verificar en consola
+            console.log('🎉 Página Toba Jurídicos cargada');
+            console.log('✨ 150 partículas moradas VISIBLES creadas');
+            console.log('🎯 Cursor búho activado');
+            console.log('✅ Sin círculos en logo ni foto');
+            console.log('📍 Partículas: detrás del contenido, sobre fondo negro');
+            
+            // Verificar que la imagen del abogado existe
+            const abogadoImg = document.querySelector('.abogado-img');
+            if (abogadoImg) {
+                abogadoImg.onerror = function() {
+                    console.log('⚠️ No se encontró abogado.png');
+                    this.style.display = 'none';
+                    // Mostrar icono de búho como respaldo
+                    const container = document.querySelector('.abogado-container');
+                    container.innerHTML = '<div class="logo-owl" style="font-size: 100px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">🦉</div>';
+                };
+                
+                abogadoImg.onload = function() {
+                    console.log('✅ Imagen del abogado cargada correctamente');
+                };
+            }
+        });
+
+        // ==================== //
+        // EFECTOS INTERACTIVOS //
+        // ==================== //
+        // Efecto de brillo al pasar el mouse sobre los servicios
+        document.querySelectorAll('.service-box').forEach(box => {
+            box.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 50px rgba(155, 89, 255, 0.6)';
+            });
+            
+            box.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '';
+            });
+        });
+
+        // Efecto especial al hacer clic
+        document.addEventListener('click', function(e) {
+            const clickEffect = document.createElement('div');
+            clickEffect.style.position = 'fixed';
+            clickEffect.style.left = `${e.clientX - 15}px`;
+            clickEffect.style.top = `${e.clientY - 15}px`;
+            clickEffect.style.width = '30px';
+            clickEffect.style.height = '30px';
+            clickEffect.style.borderRadius = '50%';
+            clickEffect.style.background = 'radial-gradient(circle, rgba(155,89,255,0.8) 0%, transparent 70%)';
+            clickEffect.style.pointerEvents = 'none';
+            clickEffect.style.zIndex = '9999';
+            clickEffect.style.animation = 'clickEffect 0.5s forwards';
+            
+            // Agregar animación CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes clickEffect {
+                    0% { transform: scale(0.5); opacity: 1; }
+                    100% { transform: scale(2); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(clickEffect);
+            
+            // Remover después de la animación
+            setTimeout(() => {
+                clickEffect.remove();
+                style.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
